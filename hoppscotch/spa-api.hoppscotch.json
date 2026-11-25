@@ -1,0 +1,494 @@
+[
+  {
+    "v": 10,
+    "name": "Spa API - Agendamiento de Turnos",
+    "folders": [
+      {
+        "v": 10,
+        "name": "1. Turnos (demo CRUD)",
+        "folders": [],
+        "requests": [
+          {
+            "v": "11",
+            "name": "1) GET - ver todos los turnos",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/turnos",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "2) POST - agendar turno nuevo",
+            "method": "POST",
+            "endpoint": "http://localhost:3000/api/turnos",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"fecha_hora\": \"2026-12-18 16:30\",\n  \"estado\": \"confirmado\",\n  \"id_cliente\": 6,\n  \"id_especialista\": 3,\n  \"id_tratamiento\": 3\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "3) PUT - reprogramar/cancelar turno 2",
+            "method": "PUT",
+            "endpoint": "http://localhost:3000/api/turnos/2",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"fecha_hora\": \"2026-12-01 13:00\",\n  \"estado\": \"cancelado\",\n  \"id_especialista\": 5\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "4) DELETE - eliminar turno 12",
+            "method": "DELETE",
+            "endpoint": "http://localhost:3000/api/turnos/12",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "GET turno por id",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/turnos/1",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "GET turnos cancelados",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/turnos?estado=cancelado",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": [],
+        "variables": []
+      },
+      {
+        "v": 10,
+        "name": "2. Tratamientos",
+        "folders": [],
+        "requests": [
+          {
+            "v": "11",
+            "name": "GET todos los tratamientos",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/tratamientos",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "GET tratamientos por id",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/tratamientos/1",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "POST crear tratamientos",
+            "method": "POST",
+            "endpoint": "http://localhost:3000/api/tratamientos",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nombre\": \"Masaje descontracturante\",\n  \"duracion_minutos\": 60,\n  \"costo\": 1100.0\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "PUT actualizar tratamientos",
+            "method": "PUT",
+            "endpoint": "http://localhost:3000/api/tratamientos/5",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"costo\": 900.0\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "DELETE eliminar tratamientos",
+            "method": "DELETE",
+            "endpoint": "http://localhost:3000/api/tratamientos/13",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": [],
+        "variables": []
+      },
+      {
+        "v": 10,
+        "name": "3. Especialistas",
+        "folders": [],
+        "requests": [
+          {
+            "v": "11",
+            "name": "GET todos los especialistas",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/especialistas",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "GET especialistas por id",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/especialistas/1",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "POST crear especialistas",
+            "method": "POST",
+            "endpoint": "http://localhost:3000/api/especialistas",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nombre\": \"Renata Aguirre Bravo\",\n  \"telefono\": \"5587654321\",\n  \"especialidad\": \"Maquillaje profesional\"\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "PUT actualizar especialistas",
+            "method": "PUT",
+            "endpoint": "http://localhost:3000/api/especialistas/2",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"telefono\": \"5599887766\"\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "DELETE eliminar especialistas",
+            "method": "DELETE",
+            "endpoint": "http://localhost:3000/api/especialistas/13",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": [],
+        "variables": []
+      },
+      {
+        "v": 10,
+        "name": "4. Clientes",
+        "folders": [],
+        "requests": [
+          {
+            "v": "11",
+            "name": "GET todos los clientes",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/clientes",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "GET clientes por id",
+            "method": "GET",
+            "endpoint": "http://localhost:3000/api/clientes/1",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "POST crear clientes",
+            "method": "POST",
+            "endpoint": "http://localhost:3000/api/clientes",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nombre\": \"Natalia Bermúdez Lara\",\n  \"correo\": \"natalia.bermudez@gmail.com\",\n  \"fecha_cumpleanos\": \"1997-04-21\"\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "PUT actualizar clientes",
+            "method": "PUT",
+            "endpoint": "http://localhost:3000/api/clientes/3",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"correo\": \"gabriela.moreno.rios@gmail.com\"\n}"
+            },
+            "requestVariables": [],
+            "responses": {}
+          },
+          {
+            "v": "11",
+            "name": "DELETE eliminar clientes",
+            "method": "DELETE",
+            "endpoint": "http://localhost:3000/api/clientes/13",
+            "params": [],
+            "headers": [],
+            "preRequestScript": "",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "requestVariables": [],
+            "responses": {}
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": [],
+        "variables": []
+      }
+    ],
+    "requests": [],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "variables": [
+      {
+        "key": "baseUrl",
+        "initialValue": "http://localhost:3000",
+        "currentValue": "http://localhost:3000",
+        "secret": false
+      }
+    ]
+  }
+]
